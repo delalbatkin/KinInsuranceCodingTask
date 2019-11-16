@@ -8,17 +8,20 @@ import utilities.Driver;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Littlefoot_Library {
+public class LittlefootLibraryPage {
 
-    public Littlefoot_Library(){
+    public LittlefootLibraryPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//input[@name='fistName']")
-    public WebElement fistName;
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement firstName;
 
-    @FindBy(xpath = "//input[@name='lastName']")
-    public WebElement lastName;
+    @FindBy(xpath = "//input[@name='town_resident']")
+    public WebElement townResidentYes;
+
+    @FindBy(xpath = "//input[@name='sex']")
+    public WebElement townResidentNo;
 
     @FindBy(xpath = "//input[@name='title']")
     public WebElement title;
@@ -35,7 +38,7 @@ public class Littlefoot_Library {
     @FindBy(xpath = "//input[@name='dewey_decimal']")
     public WebElement dewey_decimal;
 
-    @FindBy(xpath = "//select[@name='dropdown']")
+    @FindBy(xpath = "//select[@name='readDropdown']")
     public WebElement dropdown;
 
     public static Map<String, Integer> totalPages = new HashMap<>();
